@@ -46,7 +46,7 @@ posts = [
 
 def index(request):
     template = 'blog/index.html'
-    context = {'posts': reversed(posts)}
+    context = {'posts': posts}
     return render(request, template, context)
 
 
