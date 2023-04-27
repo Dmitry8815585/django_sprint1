@@ -53,7 +53,7 @@ def index(request):
 
 def post_detail(request, id):
     template = 'blog/detail.html'
-    if id > len(posts):
+    if id >= len(posts) - 1:
         raise Http404('Пост не найден')
     context = {'post': posts[id]}
     return render(request, template, context)
