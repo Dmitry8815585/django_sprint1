@@ -1,16 +1,15 @@
 {% extends "base.html" %}
 {% block title %}
-{{ blog.location }} {{ post.location }}. {{ post.date }} {{ blog.date }}
+{{ post.location }}. {{ post.date }}
 {% endblock %}
 {% block content %}
 <div class="container py-5">
   <article>
     {% include 'includes/detail_body.html' %} 
     <p>
-      {{ post.text }}
+      {{ post.text|linebreaksbr }}
     </p>          
-  </article>
-                
+  </article>   
 </div>
 {% endblock %}
 

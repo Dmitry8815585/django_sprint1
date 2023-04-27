@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.http import Http404
 
 posts = [
     {
@@ -52,8 +53,8 @@ def index(request):
 
 def post_detail(request, id):
     template = 'blog/detail.html'
-    if not posts:
-        raise ValueError('Словарь должен быть не пустой')
+    if id > len(posts):
+        raise Http404('Пост не найден')
     context = {'post': posts[id]}
     return render(request, template, context)
 
