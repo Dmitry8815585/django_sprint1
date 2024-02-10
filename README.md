@@ -9,3 +9,7 @@
 Пользователи могут заходить на чужие страницы, читать и комментировать чужие посты.
 
 Для своей страницы автор может задать имя и уникальный адрес.
+
+## Стек проекта "Blogicum"
+
+HTML, CSS, JavaScript, React, Python, Django, Django Framework, DRF, SQL, JSON API, Unit Testing, Tasks Tracking Systems
